@@ -77,6 +77,9 @@ class MainActivity : AppCompatActivity() {
             revenue = savedInstanceState.getInt(KEY_REVENUE, 0)
             dessertsSold = savedInstanceState.getInt(KEY_DESSERT_SOLD, 0)
             showCurrentDessert()
+            Log.d(TAG, "restoring state")
+        } else {
+            Log.d(TAG, "state was null")
         }
 
         binding.dessertButton.setOnClickListener {
